@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+ <meta charset="UTF-8">
+ <title>aprende con misterio</title>
+</head>
+<body>
+    <video id="myVideo" autoplay muted>
+     <source src="video.mp4" type="video/mp4">
+    </video>
+    <style>
+        body {
+            margin-bottom: 10px ;
+            overflow: hidden;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        video {
+            width:900px;
+            object-fit: cover;
+        }
+    </style>
+    <script>
+        document.getElementById("myVideo").addEventListener("ended", function() {
+            window.location.href = "menu.html"; // Переход на другой файл
+        });
+    </script>
+</body>
+</html>
